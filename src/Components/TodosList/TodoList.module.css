@@ -1,7 +1,8 @@
 .header {
-  font-family: sans-serif;
+  font-family: Roboto;
+  color: cadetblue;
   font-size: 35px;
-  text-decoration: underline;
+  font-weight: 600;
 }
 
 .listContainer {
@@ -11,14 +12,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.listContainer li {
-  padding: 15px;
-  width: 500px;
-  border: 1px solid black;
-  border-radius: 5px;
-  text-align: right;
 }
 
 .listContainer li:not(:last-child) {

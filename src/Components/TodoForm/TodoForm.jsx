@@ -1,9 +1,11 @@
 
 import { useState } from 'react';
-import {CSSTransition} from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group'
+import { Button } from '@mui/material'
 import { connect } from 'react-redux';
 import {addTask} from '../../redux/actions';
 import styles from './TodoForm.module.css';
+
 
 const minTodoLength = 1
 
@@ -29,11 +31,11 @@ function TodoForm(prop) {
       timeout={500}
       classNames={styles}>
       <form className={styles.container}>
-        <label>To do:
+        <label>Enter task:
           <textarea type="text-area" value={inputValue} onChange={handleInputChange}
           />
         </label>
-        <button type='submit' onClick={handleAddTask}>Add</button>
+        <Button type='submit' onClick={handleAddTask} variant="contained">Add</Button>
       </form>
     </CSSTransition>
   );

@@ -1,21 +1,28 @@
 import { Link } from 'react-router-dom';
-import {CSSTransition} from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group'
+import {AppBar, Toolbar, Button } from '@mui/material'
 import styles from './Menu.module.css'
+
+
 
 export default function Menu() {
   return (
-    <CSSTransition
-    in={true}
-    appear={true}
-    timeout={500}
-    classNames={styles}>
-      <div>
+    <AppBar position="static">
+      <CSSTransition
+        in={true}
+        appear={true}
+        timeout={500}
+        classNames={styles}>
+        <Toolbar variant="dense" >
+          <div>
           <ul className={styles.mainMenu}>
-              <li><Link to='/form'>Create todo</Link></li>
-              <li><Link to="/list">Todos list</Link></li>
-              
+              <li><Link to='/form'><Button variant="contained">Create task</Button></Link></li>
+              <li><Link to="/list"><Button variant="contained">Task list</Button></Link></li>
           </ul>
-      </div>
-    </CSSTransition>
+          </div>
+        </Toolbar>
+      </CSSTransition>
+    </AppBar>
+   
   );
 }

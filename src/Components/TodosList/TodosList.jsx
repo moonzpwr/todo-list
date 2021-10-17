@@ -32,7 +32,7 @@ function TodosList({ removeTask: remove, editTask: edit, asynkInitTodos: asynkIn
         timeout={500}
         classNames={styles}>
         <>
-            <h2 className={styles.header}>Todo list</h2>
+            <h2 className={styles.header}>TASK LIST</h2>
             <TransitionGroup component='ul' className={styles.listContainer}>
                 {tasks.map(({ id, title } = {}) => {
                     return (
